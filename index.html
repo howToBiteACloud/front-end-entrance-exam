@@ -1,13 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="resume-container">
+
+    <div class="resume-head">
+      <section class="resume-card resume-card_image">
+        <img
+          class="resume-photo"
+          src="public/photo.png";
+          alt="Гений, миллиардер, плейбой, филантроп" />
+      </section>
+
+      <section class="resume-card name-box">
+        <span class="greetings" data-textedited>Hello 👋🏻 I’m</span>
+        <div class="your-info">
+          <div class="your-info__fio" data-textedited>Karthik SR</div>
+          <div class="your-info__role" data-textedited>UX/UI Designer</div>
+        </div>
+      </section>
+
+      <section class="resume-card language-skills">
+        <h4 class="resume-card__title" data-textedited>Languages</h4>
+        
+        <table class="language-list">
+          <tbody>
+            <tr class="language-item">
+              <td class="language-name" data-textedited>English</td>
+              <td>
+                <div class="progress-bar"></div>
+              </td>
+              </tr>
+            <tr class="language-item">
+              <td class="language-name" data-textedited>Malayalam</td>
+              <td>
+                <div class="progress-bar"></div>
+              </td>
+              </tr>
+            <tr class="language-item">
+              <td class="language-name" data-textedited>Hindi</td>
+              <td>
+                <div class="progress-bar non-full"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="experience-and-tools">
+      <section class="resume-card expirience-box">
+        <h4 class="resume-card__title" data-textedited>Experience</h4>
+
+        <div class="experience-item resume-item_active">
+          <span class="most-recent-unit">
+            <span class="experience-date" data-textedited>Jun. 2023 - Present</span>
+            <div class="most-recent-tag" data-textedited>most-recent</div>
+          </span>
+          
+          <div class="job-info">
+            <div class="job-info__main">
+              <p class="experience-role" data-textedited>Marketing Manager</p>
+              <div class="about-job">
+                <span data-textedited>Pankayam</span>
+                <span>|</span>
+                <span data-textedited>Full-time</span>
+              </div>
+            </div>
+            <ul class="feature-points">
+              <li data-textedited>Strategy development and planning of campaigns that promote the business and generate genuine traffic
+              </li>
+              <li data-textedited>SEO Content Creation for Blogs, Website, Social media</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span class="experience-date" data-textedited>2017 - Present</span>
+          
+          <div class="job-info">
+            <div class="job-info__main">
+              <p class="experience-role" data-textedited>Graphic / Web designer</p>
+              <div class="about-job">
+                <!-- <span></span>
+                <span></span> -->
+                <span data-textedited>Freelance</span>
+              </div>
+            </div>
+            <ul class="feature-points">
+              <li data-textedited>Development of internal projects from scratch, product design of brands</li>
+              <li data-textedited>Landing page, webapps and hybrid apps</li>
+              <li data-textedited>Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <span class="experience-date" data-textedited>Sep. 2021 - Jun. 2023</span>
+
+          <div class="job-info">
+            <div class="job-info__main">
+              <p class="experience-role" data-textedited>Legal Assistant</p>
+              <div class="about-job">
+                <span data-textedited>Law Firm</span>
+                <span>|</span>
+                <span data-textedited>Intern</span>
+              </div>
+            </div>
+            <ul class="feature-points">
+              <li data-textedited>Provide administrative support to lawyer and enhance office effectiveness
+              </li>
+              <li data-textedited>Handle communication with clients, witnesses etc.</li>
+              <li data-textedited>repare case briefs and summarize depositions, interrogatories and testimony</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-card tools-box">
+        <h4 class="resume-card__title" data-textedited>Tools</h4>
+        <div class="resume-tools">
+          <div class="design-tag" data-textedited>design</div>
+          <div class="tools-block">
+            <div class="tools-list">
+              <div class="tools-list__logo"><img src="public/logoFigma.svg"></div>
+              <div class="tools-list__logo"><img src="public/icon _adobe photoshop_.svg"></div>
+              <div class="tools-list__logo"><img src="public/icon_adobe-illustrator_.svg"></div>
+              <div class="tools-list__logo"><img src="public/icon _adobe premiere_.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoNotion.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoMeet.svg"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-tools">
+          <div class="design-tag" data-textedited>no-code</div>
+          <div class="tools-block">
+            <div class="tools-list">
+              <div class="tools-list__logo"><img src="public/logoZapìer 1.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoWebflow.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoFramer.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoWordpress.svg"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-tools">
+          <div class="design-tag" data-textedited>artoficial intelligence</div>
+          <div class="tools-block">
+            <div class="tools-list">
+              <div class="tools-list__logo"><img src="public/logoChatGPT.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoCopilot.svg"></div>
+              <div class="tools-list__logo"><img src="public/logoMidjourney.svg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="resume-foot">
+
+      <section class="resume-card edu-box">
+        <h4 class="resume-card__title" data-textedited>Education</h4>
+        <div class="education-block">
+          <div class="first-edu-block">
+            <div class="education-kind resume-item_active">
+              <div class="top-bar">
+                <span>2023</span>
+                <div><img src="public/Vector.svg"></div>
+              </div>
+              <div class="education-content">
+                <span class="experience-role" data-textedited>UI/UX</span>
+                <p class="edu-tags" data-textedited>#UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux</p>
+                <p class="edu-source" data-textedited>Coursera</p>
+              </div>
+            </div>
+
+            <div class="education-kind">
+              <div class="top-bar" data-textedited>2017</div>
+              <div class="education-content">
+                <span class="experience-role" data-textedited>Graphic design</span>
+                <p class="edu-tags" data-textedited>#branding #web #illustration #adobe</p>
+                <p class="edu-source" data-textedited>Coursera</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="second-edu-block">
+            <div class="education-kind">
+              <div class="top-bar">
+                <span data-textedited>2017 - 2022</span>
+              </div>
+              <div class="education-content">
+                <span class="experience-role" data-textedited>Law</span>
+                <p class="edu-tags" data-textedited>#law #legalStudies #contracts #internationalLaws</p>
+                <p class="edu-source" data-textedited>University of Kerala</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="resume-extrabox">
+        <section class="resume-card edu-interests">
+          <h4 class="resume-card__title" data-textedited> Interests</h4>
+          <div class="interests-box">
+            <div class="interests-kind" data-textedited>branding</div>
+            <div class="interests-kind" data-textedited>design</div>
+            <div class="interests-kind" data-textedited>photography</div>
+            <div class="interests-kind" data-textedited>artificial intelligence</div>
+            <div class="interests-kind" data-textedited>illustration</div>
+            <div class="interests-kind" data-textedited>typography</div>
+            <div class="interests-kind" data-textedited>social networks</div>
+            <div class="interests-kind" data-textedited>research</div>
+            <div class="interests-kind" data-textedited>dron pilot</div>
+            <div class="interests-kind" data-textedited>games</div>
+          </div>
+        </section>
+
+        <section class="resume-contacts">
+          <h4 class="resume-card__title contact-title" data-textedited>Let´s chat! I´m ready to work on excinting projects</h4>
+          <span data-textedited>srkarthik.designscape@gmail.com</span>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <dialog>
+    <div class="redactor">
+
+      <div class="redactor__actions">
+        <button autofocus id="close">X</button>
+        <button id="save">SAVE</button>
+      </div>
+      
+      <div class="redactor__content">
+        <textarea id="editor"></textarea>
+      </div>
+    </div>
+
+  </dialog>
+  <script src="./js/resume.js"></script>
+</body>
 </html>
