@@ -4,6 +4,10 @@ body {
   font-weight: 400;
 }
 
+textarea {
+  resize: none;
+}
+
 .resume-container {
   margin-left: auto;
   margin-right: auto;
@@ -137,7 +141,8 @@ body {
   border-radius: 59px;
   align-content: center;
   white-space: nowrap;
-  padding: 2px 6px;
+  padding: 3px 6px;
+  height: fit-content;
 }
 
 .most-recent-unit {
@@ -181,6 +186,7 @@ body {
   padding-left: 16px;
   line-height: 12px;
   margin: 0;
+  overflow: hidden;
 }
 
 .experience-date {
@@ -301,6 +307,7 @@ body {
   margin: 0;
   line-height: 12px;
   color: #149063;
+  word-break: break-word;
 }
 
 .edu-box {
@@ -356,6 +363,9 @@ body {
   width: fit-content;
   margin-right: 8px;
   margin-top: 8px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .interests-kind + .interests-kind {
@@ -380,6 +390,105 @@ dialog {
   border: 0;
   margin:auto;
   border-radius: 10px;
+
+  @media screen and (max-width: 555px) {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+dialog:not([open]) {
+  
+  @media screen and (max-width: 555px) {
+    animation: toBottom .1s linear forwards;
+  }
+}
+
+dialog[open] {
+  
+  @media screen and (max-width: 555px) {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    margin: 0;
+    animation: toTop .15s linear forwards;
+  }
+}
+
+@keyframes toBottom {
+  from {
+    transform:translateY(0%);
+  }
+
+  to {
+    transform:translateY(100%);
+  }
+}
+
+@keyframes toTop {
+  from {
+    transform:translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hide {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+::backdrop {
+  animation: hide .2s linear forwards;
+}
+
+#close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.pin:before, .pin:after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 6px;
+  background: rgb(180, 179, 179);
+}
+
+.pin:before {
+  transform: rotate(45deg);
+  padding: .5px;
+  border-radius: 8px;
+}
+
+.pin:after {
+  transform: rotate(-45deg);
+  padding: .5px;
+  border-radius: 8px;
+}
+
+#save {
+  background-color: #28D979;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 10px;
 }
 
 .redactor {
@@ -395,13 +504,12 @@ dialog {
 
 .redactor__actions {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: auto;
   min-width: fit-content;
   margin: 4px;
-
 }
 
 .redactor__content {
@@ -414,10 +522,8 @@ dialog {
 }
 
 #editor {
-  background-color: rgba(252, 252, 252);
   padding: 8px;
   overflow-y: auto;
-  box-shadow: inset 0 0 8px 1px rgba(0,0,0,.2);
   flex-grow: 1;
   flex-shrink: 0;
   outline: none;
@@ -488,9 +594,13 @@ dialog {
 
 .toPDF {
   /* position: fixed; */
-  margin-top: 4px;
-  bottom: 150px;
-  right: 250px;
+  margin-top: 20px;
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 10px;
 }
 
 span.ripple {

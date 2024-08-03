@@ -109,7 +109,7 @@ function main() {
   }
   
   function convertAndDownload() {
-    const element = document.querySelector('.resume-container');
+    const element = document.querySelector('.resume-content');
     html2pdf(element);
   }
 
