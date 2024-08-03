@@ -16,7 +16,7 @@ function main() {
   function registerHandlers() {
     document.body.addEventListener('click', onEdit);
 
-    dialog.addEventListener('click', closeDialog);
+    dialog.addEventListener('mousedown', closeDialog);
   }
 
   function onEdit(event) {
