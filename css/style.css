@@ -5,18 +5,26 @@ body {
 }
 
 .resume-container {
-  /* display: none; */
-  width: 555px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  width: 555px;
+
+  /** mobile */
+  @media screen and (max-width: 555px) {
+    width: 96%;
+  }
 }
 
 .resume-head {
   display: grid;
-  grid-template-columns: 124px 124px auto;
+  grid-template-columns: 124px 1fr 2fr;
   grid-auto-flow: row; 
   gap: 20px;
+
+  @media screen and (max-width: 555px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .resume-card {
@@ -70,6 +78,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: 555px) {
+    grid-column: span 2;
+  }
 }
 
 .progress-bar {
@@ -104,6 +116,8 @@ body {
 .expirience-box {
   width: 100%;
   margin-right: 20px;
+  box-sizing: border-box;
+
 }
 
 .experience-item {
@@ -136,10 +150,20 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+  }
 }
 
 .tools-box {
   width: 124px;
+
+  @media screen and (max-width: 555px) {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
 }
 
 .job-info {
@@ -228,12 +252,20 @@ body {
 
 .resume-tools + .resume-tools {
   margin-top: 12px;
+
+  @media screen and (max-width: 555px) {
+    margin-top: 0;
+  }
 }
 
 .resume-foot {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 555px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .education-block {
@@ -275,6 +307,10 @@ body {
   margin-right: 20px;
   width: 268px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 555px) {
+    width: 100%
+  }
 }
 
 .edu-source {
@@ -296,6 +332,10 @@ body {
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
+
+  @media screen and (max-width: 555px) {
+    margin-top: 20px;
+  }
 }
 
 .resume-contacts {
@@ -465,5 +505,14 @@ span.ripple {
   to {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+.resume-tools-groups {
+
+  @media screen and (max-width: 555px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
   }
 }
