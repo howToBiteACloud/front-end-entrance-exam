@@ -32,7 +32,6 @@ function main() {
     console.log(target, event.currentTarget);
 
     if (resumeCard) {
-      console.log('CARD');
       createRipple(event, resumeCard);
     }
 
@@ -45,6 +44,8 @@ function main() {
     editor.focus();
 
     editor.value = target.innerHTML;
+
+    document.body.classList.add('overflow-none');
 
     closeButton.addEventListener("click", dialogOff);
 
@@ -76,6 +77,8 @@ function main() {
 
   function dialogOff() {
     dialog.close();
+
+    document.body.classList.remove('overflow-none');
 
     closeButton.removeEventListener("click", dialogOff);
     saveButton.removeEventListener('click', onSave);

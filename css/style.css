@@ -392,8 +392,8 @@ dialog {
   border-radius: 10px;
 
   @media screen and (max-width: 555px) {
-    width: 86%;
-    max-width: 86%;
+    width: 96%;
+    max-width: 96%;
     border-radius: 0;
     bottom: 0;
     margin-bottom: 0;
@@ -410,12 +410,12 @@ dialog:not([open]) {
 dialog[open] {
   
   @media screen and (max-width: 555px) {
-    height: 40%;
-    width: 86%;
-    max-width: 86%;
+    height: 50%;
+    width: 96%;
+    max-width: 96%;
     max-height: 100%;
     border-radius: 0;
-    margin-top: 0;
+    margin: auto;
     animation: toTop .15s linear forwards;
   }
 }
@@ -532,6 +532,10 @@ dialog[open] {
   height: 100%;
   border: none;
   box-sizing: border-box; 
+
+  @media screen and (max-width: 555px) {
+    padding-top: 40px;
+  }
 }
   .animation,
   .animation::after {
@@ -625,4 +629,8 @@ span.ripple {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
   }
+}
+
+.overflow-none {
+  overflow: hidden;
 }
