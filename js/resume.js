@@ -28,8 +28,7 @@ function main() {
 
   function onEdit(event) {
     const target = event.target;
-    const resumeCard = target.closest('.resume-block')
-    console.log(target, event.currentTarget);
+    const resumeCard = target.closest('.resume-block');
 
     if (resumeCard) {
       createRipple(event, resumeCard);
@@ -50,8 +49,6 @@ function main() {
     closeButton.addEventListener("click", dialogOff);
 
     saveButton.addEventListener('click', onSave);
-
-    document.add
   }
 
   function onSave() {
@@ -94,7 +91,7 @@ function main() {
     const index = editableElems.indexOf(activeElem, 0);
     
     arrData[index] = activeElem.textContent;
-    saveDataInLS(JSON.stringify(arrData))
+    saveDataInLS(JSON.stringify(arrData));
   }
 
   function saveDataInLS(item) {
@@ -126,8 +123,6 @@ function main() {
     circle.style.left = `${event.clientX - (elem.offsetLeft + radius)}px`;
     circle.style.top = `${event.clientY - (elem.offsetTop + radius)}px`;
     circle.classList.add("ripple"); 
-
-    const ripple = elem.getElementsByClassName("ripple")[0];
 
     elem.appendChild(circle);
 
