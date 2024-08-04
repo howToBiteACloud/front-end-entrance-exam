@@ -129,11 +129,11 @@ function main() {
 
     const ripple = elem.getElementsByClassName("ripple")[0];
 
-    if (ripple) {
-      ripple.remove();
-    }
-
     elem.appendChild(circle);
+
+    setTimeout(() => {
+      circle.remove();
+     }, 700);
   }
 }
 
