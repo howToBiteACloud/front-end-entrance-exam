@@ -273,6 +273,7 @@ textarea {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 
   @media screen and (max-width: 555px) {
     grid-template-columns: 1fr;
@@ -316,7 +317,6 @@ textarea {
 }
 
 .edu-box {
-  margin-right: 20px;
   width: 268px;
   box-sizing: border-box;
 
@@ -345,9 +345,6 @@ textarea {
   font-size: 10px;
   line-height: 15px;
 
-  @media screen and (max-width: 555px) {
-    margin-top: 20px;
-  }
 }
 
 .resume-contacts {
