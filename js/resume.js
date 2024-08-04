@@ -5,6 +5,9 @@ function main() {
   const editor = document.getElementById('editor');
   const editableElems = Array.from(document.querySelectorAll('[data-textedited]'));
   const toPDFButton = document.querySelector('.toPDF');
+  const toPDFButton2 = document.querySelector('.toPDF2');
+
+  const resumeContent = document.querySelector('.resume-content');
 
   const arrData = editableElems.map(el => el.textContent);
 
@@ -23,7 +26,9 @@ function main() {
 
     dialog.addEventListener('mousedown', closeDialog);
 
-    toPDFButton.addEventListener('click', convertAndDownload);
+    toPDFButton.addEventListener('click', generatePDF);
+
+    toPDFButton2.addEventListener('click', convertAndDownload);
   }
 
   function onEdit(event) {
@@ -111,6 +116,15 @@ function main() {
   function convertAndDownload() {
     const element = document.querySelector('.resume-content');
     html2pdf(element);
+  }
+
+  function generatePDF() {
+    let pdf = new jsPDF("p", "pt", "a4");
+    let options = { pagesplit: true };
+  
+    pdf.addHTML(resumeContent, options, () => {
+      pdf.save("myDocument.pdf");
+    });
   }
 
   function createRipple(event, elem) {

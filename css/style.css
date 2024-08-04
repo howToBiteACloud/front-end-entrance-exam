@@ -8,6 +8,11 @@ textarea {
   resize: none;
 }
 
+.resume-content {
+  background-color: #FFFFFF;
+  margin: auto;
+}
+
 .resume-container {
   margin-left: auto;
   margin-right: auto;
@@ -368,10 +373,6 @@ textarea {
   overflow: hidden;
 }
 
-.interests-kind + .interests-kind {
-  margin-top: 8px;
-}
-
 .interests-box {
   display: flex;
   flex-wrap: wrap;
@@ -456,10 +457,11 @@ dialog[open] {
 
 #close {
   position: fixed;
-  top: 20px;
-  right: 24px;
+  top: 16px;
+  right: 30px;
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 .pin:before, .pin:after {
@@ -468,6 +470,7 @@ dialog[open] {
   width: 22px;
   height: 6px;
   background: rgb(180, 179, 179);
+  margin-right: 12px;
 }
 
 .pin:before {
@@ -596,7 +599,7 @@ dialog[open] {
   }
 }
 
-.toPDF {
+.toPDF, .toPDF2 {
   /* position: fixed; */
   margin-top: 20px;
   background-color: black;
@@ -633,4 +636,8 @@ span.ripple {
 
 .overflow-none {
   overflow: hidden;
+}
+
+.toPDF2 {
+  background-color: #28D979;
 }
