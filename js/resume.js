@@ -28,7 +28,7 @@ function main() {
 
   function onEdit(event) {
     const target = event.target;
-    const resumeCard = target.closest('.resume-card')
+    const resumeCard = target.closest('.resume-block')
     console.log(target, event.currentTarget);
 
     if (resumeCard) {
