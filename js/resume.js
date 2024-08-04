@@ -123,8 +123,6 @@ function main() {
       jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
   };
     html2pdf().from(element).set(options).save();
-
-    // html2pdf(element);
   }
 
   function generatePDF() {
